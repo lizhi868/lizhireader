@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_main">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/white">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_tl_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            app:tabGravity="center"
+            app:tabIndicatorFullWidth="false"
+            app:tabIndicatorGravity="bottom"
+            app:tabIndicatorHeight="4dp"
+            app:tabMode="fixed"
+            app:tabRippleColor="@color/white" />
+
+        <ImageView
+            android:id="@+id/iv_head"
+            android:layout_width="44dp"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="12dp"
+            android:padding="8dp"
+            android:src="@mipmap/my" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_search"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/bg_search"
+        android:gravity="center_vertical"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:text="@string/search_book_key"
+        android:textColor="@color/color_C5CDD6"
+        android:textSize="14sp"
+        tools:ignore="RtlHardcoded" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/tab_vp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+    <!--    <RelativeLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content">-->
+
+    <!--        <androidx.viewpager.widget.ViewPager-->
+    <!--            android:id="@+id/tab_vp"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            app:layout_behavior="@string/appbar_scrolling_view_behavior" />-->
+
+    <!--        <View-->
+    <!--            android:id="@+id/view_line"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:background="@color/white"-->
+    <!--            android:layout_height="10dp" />-->
+
+    <!--        <View-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="5dp"-->
+    <!--            android:layout_below="@+id/view_line"-->
+    <!--            android:background="@drawable/bg_shade" />-->
+
+    <!--    </RelativeLayout>-->
+
+
+</LinearLayout>

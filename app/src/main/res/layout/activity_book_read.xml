@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fl_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--阅读页面-->
+    <com.lizhi.reader.widget.page.PageView
+        android:id="@+id/pageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:focusable="true"
+        tools:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/cursor_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_cursor_left"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/cursor_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_cursor_right"
+        android:visibility="invisible" />
+
+    <com.lizhi.reader.view.popupwindow.ReadLongPressPop
+        android:id="@+id/readLongPress"
+        android:layout_width="120dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:visibility="invisible" />
+
+    <com.lizhi.reader.view.popupwindow.MediaPlayerPop
+        android:id="@+id/mediaPlayerPop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:id="@+id/fl_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible">
+
+        <View
+            android:id="@+id/v_menu_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#00000000"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <LinearLayout
+            android:id="@+id/ll_menu_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="invisible">
+
+            <LinearLayout
+                android:id="@+id/ll_ISB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:orientation="vertical">
+
+                <com.google.android.material.appbar.AppBarLayout
+                    android:id="@+id/appBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="?attr/actionBarStyle">
+
+                    <androidx.appcompat.widget.Toolbar
+                        android:id="@+id/toolbar"
+                        style="@style/NoPaddingToolbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:background="@color/white"
+                        android:transitionName="sharedView"
+                        app:popupTheme="@style/AppTheme.PopupOverlay">
+
+                    </androidx.appcompat.widget.Toolbar>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="#14000000" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:background="@color/colorPrimary">
+
+                        <TextView
+                            android:id="@+id/tv_chapter_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:paddingStart="20dp"
+                            android:paddingTop="2dp"
+                            android:paddingEnd="20dp"
+                            android:paddingBottom="2dp"
+                            android:singleLine="true"
+                            android:textColor="@color/color_556270"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tv_chapter_url"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentEnd="true"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:paddingStart="20dp"
+                            android:paddingTop="2dp"
+                            android:paddingEnd="20dp"
+                            android:paddingBottom="2dp"
+                            android:singleLine="true"
+                            android:textColor="@color/color_556270"
+                            android:textSize="12sp" />
+
+                    </RelativeLayout>
+
+                </com.google.android.material.appbar.AppBarLayout>
+
+            </LinearLayout>
+
+            <View style="@style/Style.Shadow.Top" />
+        </LinearLayout>
+
+        <com.lizhi.reader.view.popupwindow.ReadBottomMenu
+            android:id="@+id/read_menu_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:visibility="invisible" />
+
+        <com.lizhi.reader.view.popupwindow.ReadAdjustPop
+            android:id="@+id/readAdjustPop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:visibility="invisible" />
+
+        <com.lizhi.reader.view.popupwindow.ReadInterfacePop
+            android:id="@+id/readInterfacePop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:visibility="invisible" />
+
+        <com.lizhi.reader.view.popupwindow.MoreSettingPop
+            android:id="@+id/moreSettingPop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:visibility="invisible" />
+
+        <com.lizhi.reader.view.popupwindow.ReadAdjustMarginPop
+            android:id="@+id/readAdjustMarginPop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:visibility="invisible" />
+
+    </FrameLayout>
+
+    <ProgressBar
+        android:id="@+id/pb_nextPage"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_gravity="bottom"
+        android:visibility="invisible" />
+
+    <LinearLayout
+        android:id="@+id/ll_read_gestures"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#80000000"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/ic_gesture_previous_page"
+                android:drawablePadding="20dp"
+                android:gravity="center"
+                android:text="上一页\n"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#99000000"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/ic_gesture_menu"
+                android:drawablePadding="20dp"
+                android:gravity="center"
+                android:text="点击中间\n显示菜单"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#80000000"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/ic_gesture_next_page"
+                android:drawablePadding="20dp"
+                android:gravity="center"
+                android:text="下一页\n"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

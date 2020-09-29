@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0dp"
+        tools:ignore="UnusedAttribute">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@style/NoPaddingToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@color/white"
+            android:transitionName="sharedView"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/searchView"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_marginLeft="-5dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/bg_search"
+                android:imeOptions="actionSearch"
+                app:iconifiedByDefault="false"
+                app:queryBackground="@null"
+                app:searchIcon="@null"
+                app:submitBackground="@null"
+                tools:ignore="RtlHardcoded,UnusedAttribute" />
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.lizhi.reader.widget.recycler.refresh.RefreshRecyclerView
+            android:id="@+id/rfRv_search_books"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            app:font_color="@color/white"
+            app:second_color="@color/main_color"
+            app:second_max_progress="80dp"
+            app:speed="2dp" />
+
+        <LinearLayout
+            android:id="@+id/ll_search_history"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:visibility="invisible">
+
+            <TextView
+                android:id="@+id/tv_bookshelf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:text="@string/bookshelf"
+                android:textColor="@color/color_949EA8"
+                android:textSize="14sp"
+                android:visibility="gone"
+                tools:ignore="RtlHardcoded" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_bookshelf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="20dp"
+                    android:text="@string/searchHistory"
+                    android:textColor="@color/color_949EA8"
+                    android:textSize="14sp"
+                    tools:ignore="RtlHardcoded" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:id="@+id/iv_search_history_clean"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="15dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:src="@mipmap/delete2" />
+            </LinearLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.flexbox.FlexboxLayout
+                    android:id="@+id/tfl_search_history"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clipToPadding="false"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="14dp"
+                    android:overScrollMode="never"
+                    app:flexDirection="row"
+                    app:flexWrap="wrap"
+                    app:showDivider="middle" />
+            </ScrollView>
+
+        </LinearLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabSearchStop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="30dp"
+            android:contentDescription="@string/stop"
+            android:src="@drawable/ic_stop_black_24dp"
+            app:elevation="5dp"
+            app:fabSize="mini"
+            app:layout_anchorGravity="right|bottom" />
+
+    </RelativeLayout>
+
+</LinearLayout>

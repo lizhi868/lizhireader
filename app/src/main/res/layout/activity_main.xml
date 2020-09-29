@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/content_main" />
+
+        <LinearLayout
+            android:id="@+id/navigation_view"
+            android:layout_width="230dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="@color/background_menu"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="40dp"
+                android:src="@mipmap/my2" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/action_download"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:drawableStart="@mipmap/download"
+                        android:drawablePadding="16dp"
+                        android:gravity="center_vertical"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="20dp"
+                        android:text="下载任务"
+                        android:textColor="@color/color_202E3D"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_margin="20dp"
+                        android:background="@color/md_grey_100" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="20dp">
+
+                        <TextView
+                            android:id="@+id/action_setting"
+                            android:layout_width="0dp"
+                            android:layout_height="52dp"
+                            android:layout_weight="1"
+                            android:drawableStart="@mipmap/install"
+                            android:drawablePadding="16dp"
+                            android:gravity="center_vertical"
+                            android:text="设置"
+                            android:textColor="@color/color_202E3D"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/iv_theme_day_night"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/action_about"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:drawableStart="@mipmap/about"
+                        android:drawablePadding="16dp"
+                        android:gravity="center_vertical"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="20dp"
+                        android:text="关于"
+                        android:textColor="@color/color_202E3D"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/tv_version"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="20dp"
+                            android:textColor="@color/color_949EA8"
+                            android:textSize="12sp" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </ScrollView>
+        </LinearLayout>
+
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+</LinearLayout>
+

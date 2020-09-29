@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <external-path
+        name="files_cache"
+        path="Android/data/com.lizhi.reader/cache" />
+    <external-path
+        name="external_storage_root"
+        path="." />
+    <external-path name="beta_external_path" path="Download/"/>
+    <external-path name="beta_external_files_path" path="Android/data/"/>
+</paths>

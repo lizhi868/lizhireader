@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:text="更新和搜索线程数"
+        android:textColor="@color/color_202E3D"
+        android:textSize="18sp" />
+
+    <NumberPicker
+        android:id="@+id/number_picker"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:theme="@android:style/Theme.Holo.Light"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp">
+
+        <TextView
+            android:id="@+id/tv_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:paddingStart="14dp"
+            android:paddingTop="7dp"
+            android:paddingEnd="14dp"
+            android:paddingBottom="7dp"
+            android:text="确定"
+            android:textColor="@color/color_F54568"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_toStartOf="@+id/tv_confirm"
+            android:paddingStart="14dp"
+            android:paddingTop="7dp"
+            android:paddingEnd="14dp"
+            android:paddingBottom="7dp"
+            android:text="取消"
+            android:textColor="@color/color_949EA8"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

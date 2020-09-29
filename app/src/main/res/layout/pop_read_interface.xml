@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="25dp"
+            android:paddingTop="28dp"
+            android:paddingRight="25dp"
+            android:paddingBottom="28dp">
+
+            <com.lizhi.reader.widget.views.ATEStrokeTextView
+                android:id="@+id/nbTextSizeAdd"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="A+"
+                android:textColor="@color/color_556270"
+                android:textSize="14sp"
+                app:cornerRadius="16dp" />
+
+            <TextView
+                android:id="@+id/nbTextSize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="20"
+                android:textColor="@color/color_949EA8"
+                android:textSize="14sp" />
+
+
+            <com.lizhi.reader.widget.views.ATEStrokeTextView
+                android:id="@+id/nbTextSizeDec"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="A-"
+                android:textSize="14sp"
+                app:cornerRadius="16dp" />
+
+            <com.lizhi.reader.widget.views.ATEStrokeTextView
+                android:id="@+id/fl_text_Bold"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/text_bold"
+                android:textSize="14sp"
+                app:cornerRadius="16dp" />
+
+            <com.lizhi.reader.widget.views.ATEStrokeTextView
+                android:id="@+id/fl_text_font"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/custom_font"
+                android:textSize="14sp"
+                app:cornerRadius="16dp" />
+
+            <com.lizhi.reader.widget.views.ATEStrokeTextView
+                android:id="@+id/fl_indent"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/indent"
+                android:textSize="14sp"
+                app:cornerRadius="16dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp"
+            android:paddingBottom="28dp">
+
+            <com.lizhi.reader.widget.views.ATEStrokeTextView
+                android:id="@+id/tvPageMode"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:layout_weight="4"
+                android:gravity="center"
+                android:text="@string/page_mode"
+                android:textSize="14sp"
+                app:cornerRadius="16dp"
+                tools:ignore="HardcodedText" />
+
+            <com.lizhi.reader.widget.views.ATEStrokeTextView
+                android:id="@+id/tvRowDef0"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:text="@string/row_0"
+                android:textSize="14sp"
+                app:cornerRadius="16dp"
+                tools:ignore="HardcodedText" />
+
+            <com.lizhi.reader.widget.views.ATEStrokeTextView
+                android:id="@+id/tvRowDef1"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:text="@string/row_1"
+                android:textSize="14sp"
+                app:cornerRadius="16dp"
+                tools:ignore="HardcodedText" />
+
+            <com.lizhi.reader.widget.views.ATEStrokeTextView
+                android:id="@+id/tvRowDef2"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:text="@string/row_2"
+                android:textSize="14sp"
+                app:cornerRadius="16dp"
+                tools:ignore="HardcodedText" />
+
+            <com.lizhi.reader.widget.views.ATEStrokeTextView
+                android:id="@+id/tvRowDef"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:text="@string/row_def"
+                android:textSize="14sp"
+                app:cornerRadius="16dp"
+                tools:ignore="HardcodedText" />
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="10dp"
+                android:layout_weight="2">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/tvOther"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/custom_mr"
+                    android:src="@color/background_menu"
+                    android:tooltipText="@string/custom_mr"
+                    app:riv_border_color="#F0F0F0"
+                    app:riv_border_width="1dp"
+                    app:riv_oval="true"
+                    tools:ignore="HardcodedText" />
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_add"
+                    tools:ignore="NestedWeights" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:paddingStart="25dp"
+            android:paddingEnd="25dp"
+            android:paddingBottom="28dp">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/civ_bg_white"
+                android:layout_width="52dp"
+                android:layout_height="32dp"
+                android:layout_weight="1"
+                android:contentDescription="背景1"
+                android:scaleType="fitXY"
+                app:riv_border_color="@color/transparent"
+                app:riv_border_width="1dp"
+                app:riv_corner_radius="16dp" />
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/civ_bg_yellow"
+                android:layout_width="52dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="15dp"
+                android:layout_weight="1"
+                android:contentDescription="背景2"
+                android:scaleType="fitXY"
+                app:riv_border_color="@color/transparent"
+                app:riv_border_width="1dp"
+                app:riv_corner_radius="16dp" />
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/civ_bg_green"
+                android:layout_width="52dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="15dp"
+                android:layout_weight="1"
+                android:contentDescription="背景3"
+                android:scaleType="fitXY"
+                app:riv_border_color="@color/transparent"
+                app:riv_border_width="1dp"
+                app:riv_corner_radius="16dp" />
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/civ_bg_blue"
+                android:layout_width="52dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="15dp"
+                android:layout_weight="1"
+                android:contentDescription="背景4"
+                android:scaleType="fitXY"
+                app:riv_border_color="@color/transparent"
+                app:riv_border_width="1dp"
+                app:riv_corner_radius="16dp" />
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/civ_bg_black"
+                android:layout_width="52dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="15dp"
+                android:layout_weight="1"
+                android:contentDescription="背景5"
+                android:scaleType="fitXY"
+                app:riv_border_color="@color/transparent"
+                app:riv_border_width="1dp"
+                app:riv_corner_radius="16dp" />
+
+            <!--            <FrameLayout-->
+            <!--                android:layout_width="52dp"-->
+            <!--                android:layout_height="32dp"-->
+            <!--                android:layout_weight="1">-->
+
+            <!--                <de.hdodenhof.circleimageview.CircleImageView-->
+            <!--                    android:id="@+id/civ_bg_white"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="match_parent"-->
+            <!--                    android:layout_gravity="center"-->
+            <!--                    android:contentDescription="背景1"-->
+            <!--                    android:src="@color/background_menu"-->
+            <!--                    app:civ_border_color="@color/tv_text_default"-->
+            <!--                    app:civ_border_width="1dp"-->
+            <!--                    tools:ignore="HardcodedText" />-->
+
+            <!--                <TextView-->
+            <!--                    android:id="@+id/tv0"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="match_parent"-->
+            <!--                    android:gravity="center"-->
+            <!--                    android:text="@string/text"-->
+            <!--                    android:textColor="@color/tv_text_default"-->
+            <!--                    android:textSize="12sp" />-->
+
+            <!--            </FrameLayout>-->
+
+            <!--            <FrameLayout-->
+            <!--                android:layout_width="52dp"-->
+            <!--                android:layout_height="32dp"-->
+            <!--                android:layout_marginStart="15dp"-->
+            <!--                android:layout_weight="1">-->
+
+            <!--                <de.hdodenhof.circleimageview.CircleImageView-->
+            <!--                    android:id="@+id/civ_bg_yellow"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="match_parent"-->
+            <!--                    android:layout_gravity="center"-->
+            <!--                    android:contentDescription="背景2"-->
+            <!--                    android:src="@color/background_menu"-->
+            <!--                    app:civ_border_color="@color/tv_text_default"-->
+            <!--                    app:civ_border_width="1dp"-->
+            <!--                    tools:ignore="HardcodedText" />-->
+
+            <!--                <TextView-->
+            <!--                    android:id="@+id/tv1"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="match_parent"-->
+            <!--                    android:gravity="center"-->
+            <!--                    android:text="@string/text"-->
+            <!--                    android:textColor="@color/tv_text_default"-->
+            <!--                    android:textSize="12sp" />-->
+
+            <!--            </FrameLayout>-->
+
+            <!--            <FrameLayout-->
+            <!--                android:layout_width="52dp"-->
+            <!--                android:layout_height="32dp"-->
+            <!--                android:layout_marginStart="15dp"-->
+            <!--                android:layout_weight="1">-->
+
+            <!--                <de.hdodenhof.circleimageview.CircleImageView-->
+            <!--                    android:id="@+id/civ_bg_green"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="match_parent"-->
+            <!--                    android:layout_gravity="center"-->
+            <!--                    android:contentDescription="背景3"-->
+            <!--                    android:src="@color/background_menu"-->
+            <!--                    app:civ_border_color="@color/tv_text_default"-->
+            <!--                    app:civ_border_width="1dp"-->
+            <!--                    tools:ignore="HardcodedText" />-->
+
+            <!--                <TextView-->
+            <!--                    android:id="@+id/tv2"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="match_parent"-->
+            <!--                    android:gravity="center"-->
+            <!--                    android:text="@string/text"-->
+            <!--                    android:textColor="@color/tv_text_default"-->
+            <!--                    android:textSize="12sp" />-->
+
+            <!--            </FrameLayout>-->
+
+            <!--            <FrameLayout-->
+            <!--                android:layout_width="52dp"-->
+            <!--                android:layout_height="32dp"-->
+            <!--                android:layout_marginStart="15dp"-->
+            <!--                android:layout_weight="1">-->
+
+            <!--                <de.hdodenhof.circleimageview.CircleImageView-->
+            <!--                    android:id="@+id/civ_bg_blue"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="match_parent"-->
+            <!--                    android:layout_gravity="center"-->
+            <!--                    android:contentDescription="背景4"-->
+            <!--                    android:src="@color/background_menu"-->
+            <!--                    app:civ_border_color="@color/tv_text_default"-->
+            <!--                    app:civ_border_width="1dp"-->
+            <!--                    tools:ignore="HardcodedText" />-->
+
+            <!--                <TextView-->
+            <!--                    android:id="@+id/tv3"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="match_parent"-->
+            <!--                    android:gravity="center"-->
+            <!--                    android:text="@string/text"-->
+            <!--                    android:textColor="@color/tv_text_default"-->
+            <!--                    android:textSize="12sp" />-->
+
+            <!--            </FrameLayout>-->
+
+            <!--            <FrameLayout-->
+            <!--                android:layout_width="52dp"-->
+            <!--                android:layout_height="32dp"-->
+            <!--                android:layout_marginStart="15dp"-->
+            <!--                android:layout_weight="1">-->
+
+            <!--                <de.hdodenhof.circleimageview.CircleImageView-->
+            <!--                    android:id="@+id/civ_bg_black"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="match_parent"-->
+            <!--                    android:layout_gravity="center"-->
+            <!--                    android:contentDescription="背景5"-->
+            <!--                    android:src="@color/background_menu"-->
+            <!--                    app:civ_border_color="@color/tv_text_default"-->
+            <!--                    app:civ_border_width="1dp"-->
+            <!--                    tools:ignore="HardcodedText" />-->
+
+            <!--                <TextView-->
+            <!--                    android:id="@+id/tv4"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="match_parent"-->
+            <!--                    android:gravity="center"-->
+            <!--                    android:text="@string/text"-->
+            <!--                    android:textColor="@color/tv_text_default"-->
+            <!--                    android:textSize="12sp" />-->
+
+            <!--            </FrameLayout>-->
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
